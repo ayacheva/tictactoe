@@ -1,0 +1,51 @@
+/* table {
+    border:1px solid grey;
+    border-collapse: collapse;
+    margin-bottom:36px;
+    
+}
+
+table.disabled td {
+    background: lightgrey;
+    pointer-events: none;
+}
+
+tr, td {
+    border: 1px solid grey;
+}
+
+td {
+    padding:10px;
+    width:40px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+    pointer-events: all;
+    transition:300ms all ease-in-out;
+}
+
+td.disabled {
+    background: lightgrey;
+    pointer-events: none;
+}
+
+button {
+    margin-bottom:20px;
+} */
+
+.tic-tac-toe-board {
+    display:table;
+    border:1px solid gray;
+    border-collapse: collapse;
+}
+.tic-tac-toe-board .row {
+    display:table-row;
+}
+.tic-tac-toe-board .row .cell {
+    display:table-cell;
+    width:40px;
+    height:40px;
+    border:1px solid gray;
+    text-align:center;
+    vertical-align: middle;
+}
