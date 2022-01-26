@@ -59,3 +59,18 @@ function handleRightClick(event) {
 
 fieldBoard.addEventListener("click", handleClick);
 fieldBoard.addEventListener("contextmenu", handleRightClick);
+
+// Reset
+let reset = document.getElementById('reset');
+
+function resetBoard() {
+    Object.values(board).forEach((x) => {
+        x.forEach((y) => {
+            y.isClicked = false;
+            y.value = '';
+        });
+    });
+    // createBoard(board);
+}
+
+reset.addEventListener('click', resetBoard);
