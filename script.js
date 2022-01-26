@@ -38,9 +38,11 @@ function playMove(event, player) {
     let cellId = event.target.getAttribute('data-cell');
     let x = cellId.split("_")[0];
     let y = cellId.split("_")[1];
-    board[x][y].isClicked = true;
-    board[x][y].value = player;
-    event.target.innerText = board[x][y].value;
+    if(!board[x][y].isClicked) {
+        board[x][y].isClicked = true;
+        board[x][y].value = player;
+        event.target.innerText = board[x][y].value;
+    }     
 }
 
 function handleClick(event) {
